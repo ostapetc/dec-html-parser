@@ -1,0 +1,26 @@
+{
+    "name": "dec-html-parser",
+    "version": "1.0.1",
+    "description": "Declarative html parser",
+    "main": "index.js",
+    "scripts": {
+        "test": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ostapetc/dec-html-parser.git"
+    },
+    "keywords": [
+        "html",
+        "parser"
+    ],
+    "author": "Artem Ostapetc",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ostapetc/dec-html-parser/issues"
+    },
+    "homepage": "https://github.com/ostapetc/dec-html-parser#readme",
+    "dependencies": {
+        "cheerio": "^1.0.0-rc.2"
+    }
+}
