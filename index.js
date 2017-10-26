@@ -25,7 +25,12 @@ htmlParser.parseObject = function(object, dom) {
 
         for (let i = 0; i < length; i++) {
             let html = dom(items[i]).html();
-            result.push(this.parseObjectProperties(object['props'], cheerio.load(html)));
+
+            if (object['props']) {
+                result.push(this.parseObjectProperties(object['props'], cheerio.load(html)));
+            } else {
+                result.push(html);
+            }
         }
 
         return result;

@@ -1,0 +1,22 @@
+{
+    "page": {
+        "type": "single",
+        "props": {
+            "name": "title",
+            "tags": {
+                "type" : "collection",
+                "css"  : "#tag-list li"
+            },
+            "authors" : {
+                "type"  : "collection",
+                "css"   : "#author-table tr",
+                "props" : {
+                    "name"     : ["td", ["eq", 0], ["find", "a"]],
+                    "href"     : ["td", ["eq", 0], ["find", "a"], ["attr", "href"]],
+                    "age"      : ["td", ["eq", 1], ["replace", "AGE: ", ""], "parseInt"],
+                    "articles" : ["td", ["eq", 2], ["match", "([0-9]+)"], "shift"]
+                }
+            }
+        }
+    }
+}

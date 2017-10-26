@@ -1,0 +1,26 @@
+{
+    "page": {
+        "name": "Page Title",
+        "tags": ["tag1", "tag2", "tag3"],
+        "authors":[
+            {
+                "name": "Fill Davis",
+                "href": "/fill-davis",
+                "age": 25,
+                "articles": "34"
+            },
+            {
+                "name": "Nick Peterson",
+                "href": "/nick-peterson",
+                "age": 31,
+                "articles": "110"
+            },
+            {
+                "name": "July Mai",
+                "href": "/nick-peterson",
+                "age": 18,
+                "articles": "3"
+            }
+        ]
+    }
+}
