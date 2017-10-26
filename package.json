@@ -1,6 +1,6 @@
 {
   "name": "dec-html-parser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Declarative html parser",
   "main": "index.js",
   "scripts": {
