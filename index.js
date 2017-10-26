@@ -1,4 +1,4 @@
-const cheerio = require('cheerio')
+const cheerio = require('cheerio');
 
 let htmlParser = {
     domMethods: ['find', 'eq', 'attr', 'first', 'last']
@@ -40,7 +40,7 @@ htmlParser.parseObject = function(object, dom) {
 };
 
 htmlParser.parseObjectProperties = function(properties, dom) {
-    let result = [];
+    let result = {};
 
     for (let name in properties) {
         if (!properties.hasOwnProperty(name)) {
@@ -57,7 +57,7 @@ htmlParser.parseObjectProperties = function(properties, dom) {
             let methods;
 
             if (Array.isArray(property)) {
-                selector = property[0]
+                selector = property[0];
                 methods  = property.slice(1);
             } else {
                 selector = property;

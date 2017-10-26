@@ -10,6 +10,6 @@ describe('htmlParser', function() {
         const expect = JSON.parse(fs.readFileSync('test/files/page.json').toString());
         const json   = parser.parse(html, schema);
 
-        assert.equal(expect, json);
+        assert.deepEqual(expect, json);
     });
 });
