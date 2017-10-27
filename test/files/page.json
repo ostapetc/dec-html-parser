@@ -21,6 +21,17 @@
                 "age": 18,
                 "articles": "3"
             }
+        ],
+        "iframes": [
+            {
+                "src": "src1"
+            },
+            {
+                "src": "src2"
+            },
+            {
+                "src": "src3"
+            }
         ]
     }
 }

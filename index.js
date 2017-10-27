@@ -24,10 +24,11 @@ htmlParser.parseObject = function(object, dom) {
         let result = [];
 
         for (let i = 0; i < length; i++) {
-            let html = dom(items[i]).html();
+            let parent = items[i];
+            let html   = dom(parent).html();
 
             if (object['props']) {
-                result.push(this.parseObjectProperties(object['props'], cheerio.load(html)));
+                result.push(this.parseObjectProperties(object['props'], cheerio.load(html), parent));
             } else {
                 result.push(html);
             }
@@ -39,7 +40,7 @@ htmlParser.parseObject = function(object, dom) {
     }
 };
 
-htmlParser.parseObjectProperties = function(properties, dom) {
+htmlParser.parseObjectProperties = function(properties, dom, parentNode) {
     let result = {};
 
     for (let name in properties) {
@@ -63,7 +64,13 @@ htmlParser.parseObjectProperties = function(properties, dom) {
                 selector = property;
             }
 
-            let node = dom(selector);
+            let node;
+
+            if (selector == "_parent") {
+                node = dom(parentNode);
+            } else {
+                node = dom(selector);
+            }
 
             if (methods) {
                 let grouped = this.groupMethods(methods);

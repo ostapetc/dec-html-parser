@@ -16,6 +16,13 @@
                     "age"      : ["td", ["eq", 1], ["replace", "AGE: ", ""], "parseInt"],
                     "articles" : ["td", ["eq", 2], ["match", "([0-9]+)"], "shift"]
                 }
+            },
+            "iframes" : {
+                "type"  : "collection",
+                "css"   : "iframe",
+                "props" : {
+                    "src" : ["_parent", ["attr", "src"]]
+                }
             }
         }
     }
